@@ -1,6 +1,10 @@
 import React,{ useState } from 'react';
 import useStats from './useStats';
 import Stats from './Stats';
+import i18n from "i18next";
+import LanguageDetector from 'i18next-browser-languagedetector';
+
+i18n.dir('ar');
 
 export default function CountrySelector() {
   const { stats: countries, loading, error } = useStats(
@@ -14,7 +18,11 @@ export default function CountrySelector() {
   return (
       
     <>
-      <h2>Currently Showing {selectedCountry}</h2>
+    {
+      i18n.use(LanguageDetector).language === 'ar' ?
+      <h2>{selectedCountry} {i18n.t('Currently Showing')} </h2> : 
+      <h2>{i18n.t('Currently Showing')} {selectedCountry}</h2>
+    }
       <select
         onChange={e => {
           setSelectedCountry(e.target.value);
