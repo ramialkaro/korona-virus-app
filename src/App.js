@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="container">
       <div className="display-4 bg-dark text-info m-3 p-3 rounded"><strong className="text-white">Time:</strong> {timer}</div>
-      
+      <div className="text-primary m-3 ">Coded by @rami alkaro</div>
       <div className="mt-5 mb-5">
         <h2>All world:</h2>
         <Stats url="https://covid19.mathdro.id/api" />
