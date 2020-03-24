@@ -14,8 +14,6 @@ export default function CountrySelector() {
   if (loading) return <p>Loading...</p>;
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
-
-  console.log(countries.countries[0])
   return (
       
     <>
