@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import useStats from './useStats';
 import Stats from './Stats';
 import i18n from "i18next";
@@ -10,27 +10,28 @@ export default function CountrySelector() {
   const { stats: countries, loading, error } = useStats(
     'https://covid19.mathdro.id/api/countries'
   );
-  const [selectedCountry, setSelectedCountry] = useState('finland');
+  const [selectedCountry, setSelectedCountry] = useState('Finland');
   if (loading) return <p>Loading...</p>;
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
   return (
-      
+
     <>
-    {
-      i18n.use(LanguageDetector).language === 'ar' ?
-      <h2>{selectedCountry} {i18n.t('Currently Showing')} </h2> : 
-      <h2>{i18n.t('Currently Showing')} {selectedCountry}</h2>
-    }
+      {
+        i18n.use(LanguageDetector).language === 'ar' ?
+          <h2>{selectedCountry} {i18n.t('Currently Showing')} </h2> :
+          <h2>{i18n.t('Currently Showing')} {selectedCountry}</h2>
+      }
       <select
-      className="form-control form-control-lg"
+        value={selectedCountry}
+        className="form-control form-control-lg"
         onChange={e => {
           setSelectedCountry(e.target.value);
         }}
       >
         {countries.countries.map((item) => (
           <option
-          defaultValue={selectedCountry}
+
             key={item.name}
             value={item.name}
           >
@@ -38,8 +39,8 @@ export default function CountrySelector() {
           </option>
         ))}
       </select>
-      
-          <Stats
+
+      <Stats
         url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`}
       ></Stats>
 
