@@ -15,6 +15,7 @@ export default function CountrySelector() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
 
+  console.log(countries.countries[0])
   return (
       
     <>
@@ -24,17 +25,18 @@ export default function CountrySelector() {
       <h2>{i18n.t('Currently Showing')} {selectedCountry}</h2>
     }
       <select
+      className="form-control form-control-lg"
         onChange={e => {
           setSelectedCountry(e.target.value);
         }}
       >
-        {Object.entries(countries.countries).map(([country, code]) => (
+        {countries.countries.map((item) => (
           <option
           defaultValue={selectedCountry}
-            key={country}
-            value={country}
+            key={item.name}
+            value={item.name}
           >
-            {country}
+            {item.name}
           </option>
         ))}
       </select>
