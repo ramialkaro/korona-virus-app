@@ -17,25 +17,32 @@ export default function Stats({ url }) {
                 <div className="card-header bg-primary text-white">{i18n.t('Confirmed')}</div>
                 <div className="card-body">
                     {(stats.confirmed === undefined) ? <h5>{i18n.t('Error')}</h5> :
-                    <>
-                        <h5 className="card-title">{stats.confirmed.value}</h5>
-                        <h6 className="seondary"><small>
-                            {moment(stats.lastUpdate).format("dddd, MMMM Do YYYY, h:mm:ss a")}
+                        <>
+                            <h5 className="card-title">{stats.confirmed.value}</h5>
+                            <h6 className="seondary"><small>
+                                {moment(stats.lastUpdate).format("dddd, MMMM Do YYYY, h:mm:ss a")}
 
-                        </small>
-                        </h6>
+                            </small>
+                            </h6>
                         </>
-}
+                    }
                 </div>
             </div>
             <div className="card mb-3" >
-                <div className="card-header text-white bg-info">{i18n.t('Recovered')}</div>
+                <div className="card-header text-white bg-info">{i18n.t('Active')}</div>
+                <div className="card-body">
+                    {(stats.confirmed === undefined) ? <h5>{i18n.t('Error')}</h5> :
+                        <h5 className="card-title">{stats.confirmed.value - (stats.recovered.value+stats.deaths.value)}</h5>}
+                </div>
+            </div>
+            <div className="card mb-3 alert-success" >
+                <div className="card-header text-white bg-success">{i18n.t('Recovered')}</div>
                 <div className="card-body">
                     {(stats.confirmed === undefined) ? <h5>{i18n.t('Error')}</h5> :
                         <h5 className="card-title">{stats.recovered.value}</h5>}
                 </div>
             </div>
-            <div className="card  mb-3" >
+            <div className="card  mb-3 alert-danger" >
                 <div className="card-header bg-danger text-white">{i18n.t('Deaths')}</div>
                 <div className="card-body">
                     {(stats.confirmed === undefined) ? <h5>{i18n.t('Error')}</h5> :

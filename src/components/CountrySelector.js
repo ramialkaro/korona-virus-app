@@ -28,7 +28,7 @@ export default function CountrySelector() {
       }
       <select
         value={selectedCountry}
-        className="form-control form-control-lg m-3"
+        className="form-control form-control-lg"
         onChange={e => {
           setSelectedCountry(e.target.value);
         }}
