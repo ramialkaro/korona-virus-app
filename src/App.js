@@ -30,9 +30,9 @@ function App() {
   return (
     <div className="container text-center">
       <div className="btn-group btn-group-toggle m-3" data-toggle="buttons">
-        <button className="btn btn-outline-light bg-success" style={{ minWidth: '4rem' }} onClick={() => i18n.changeLanguage('en')}>en</button>
-        <button className="btn btn-outline-light bg-success" style={{ minWidth: '4rem' }} onClick={() => i18n.changeLanguage('fi')}>fi</button>
-        <button className="btn btn-outline-light bg-success " style={{ minWidth: '4rem' }} onClick={() => i18n.changeLanguage('ar')}>ع</button>
+        <button className="btn btn-outline-dark alert-success mr-1" style={{ minWidth: '2.5rem' }} onClick={() => i18n.changeLanguage('en')}>en</button>
+        <button className="btn btn-outline-dark alert-success mr-1" style={{ minWidth: '2.5rem' }} onClick={() => i18n.changeLanguage('fi')}>fi</button>
+        <button className="btn btn-outline-dark alert-success mr-1" style={{ minWidth: '2.5rem' }} onClick={() => i18n.changeLanguage('ar')}>ع</button>
       </div>
 
       {
