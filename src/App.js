@@ -30,8 +30,9 @@ function App() {
   return (
     <div className="container text-center">
       <div className="btn-group btn-group-toggle m-3" data-toggle="buttons">
-        <button className="btn btn-outline-info bg-dark" style={{ minWidth: '4rem' }} onClick={() => i18n.changeLanguage('en')}>en</button>
-        <button className="btn btn-outline-dark bg-info " style={{ minWidth: '4rem' }} onClick={() => i18n.changeLanguage('ar')}>ع</button>
+        <button className="btn btn-outline-light bg-dark" style={{ minWidth: '4rem' }} onClick={() => i18n.changeLanguage('en')}>en</button>
+        <button className="btn btn-outline-light bg-dark" style={{ minWidth: '4rem' }} onClick={() => i18n.changeLanguage('fi')}>fi</button>
+        <button className="btn btn-outline-light bg-dark " style={{ minWidth: '4rem' }} onClick={() => i18n.changeLanguage('ar')}>ع</button>
       </div>
 
       {
@@ -46,13 +47,15 @@ function App() {
           </div>
       }
 
-      <div className="text-primary m-3 ">{i18n.t('coded_by')}</div>
+      
       <div className="mt-5 mb-5">
         <h2>{i18n.t('all_world')}</h2>
         <Stats url="https://covid19.mathdro.id/api" />
       </div>
       <CountrySelector />
+      <div className="text-primary m-3 ">{i18n.t('coded_by')}</div>
     </div>
+    
   );
 }
 

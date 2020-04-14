@@ -3,12 +3,25 @@ export const resources = {
       translation: {
         "time": "Time:",
         "all_world": "All world:",
-        "coded_by":"Coded by @rami alkaro",
+        "coded_by":"©rami alkaro",
         "Confirmed":"Confirmed",
         "Active":"Active",
         "Recovered":"Recovered",
         "Deaths":"Deaths",
-        "Currently Showing": "Currently Showing",
+        "Currently Showing": "Selected country",
+        "Error": "Error"
+      }
+    },
+    fi: {
+      translation: {
+        "time": "Aika:",
+        "all_world": "Maailma:",
+        "coded_by":"©rami alkaro",
+        "Confirmed":"Vahvistuu",
+        "Active":"Aktiivit",
+        "Recovered":"Tervehtyä",
+        "Deaths":"Kuolemat",
+        "Currently Showing": "Valittu maa",
         "Error": "Error"
       }
     },
@@ -16,12 +29,12 @@ export const resources = {
       translation:{
         "time":":الوقت",
         "all_world":" :جميع بلدان العالم",
-        "coded_by":"rami alkaro تم البرمجة من قبل ",
+        "coded_by":"©rami alkaro",
         "Confirmed":"عدد الحالات الموكدة",
         "Active":"نشطة",
         "Recovered":"عدد الحالات التي تم شفائها",
         "Deaths":"عدد الوفيات",
-        "Currently Showing":"البلد الحالي",
+        "Currently Showing":"البلد المحدد",
         "Error":" حدث خطأ اثناء استدعاء البيانات"
       }
     }
