@@ -30,7 +30,7 @@ export const resources = {
         "time":":الوقت",
         "all_world":" :جميع بلدان العالم",
         "coded_by":"©rami alkaro",
-        "Confirmed":"عدد الحالات الموكدة",
+        "Confirmed":"عدد الحالات المؤكدة",
         "Active":"نشطة",
         "Recovered":"عدد الحالات التي تم شفائها",
         "Deaths":"عدد الوفيات",
