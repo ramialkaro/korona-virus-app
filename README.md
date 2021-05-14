@@ -1,3 +1,2 @@
 visit the app online
-
-koronavirusapp.com
+https://coronaapp.ramialkaro.fi/
